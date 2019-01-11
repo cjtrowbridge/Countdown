@@ -20,6 +20,9 @@ function UpdateCountdowns(){
     $(this).attr('value',percentElapsed);
     $(this).attr('max',100);
     
+    //Add classes
+    $(this).css('display','block');
+    
   });
   $(":not(progress).countdown").each(function(index){
     countCountdowns++;
