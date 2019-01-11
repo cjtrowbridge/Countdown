@@ -7,10 +7,6 @@ function UpdateCountdowns(){
     var theDate = $(this).data('countdown');
     var countdownTo = new Date( theDate ).getTime();
 
-    console.log('Starting countdown to '+theDate);
-
-
-
     //Get current time
     var now = new Date().getTime();
 
