@@ -7,9 +7,9 @@ function UpdateCountdowns(){
     var now = new Date().getTime();
     
     var duration = toDate - fromDate;
-    var remaining = toDate - now;
+    var elapsed = now - fromDate;
     
-    var percentElapsed = remaining / duration;
+    var percentElapsed = elapsed / duration;
     
     //convert to percent
     percentElapsed *= 100;
