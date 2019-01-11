@@ -1,7 +1,10 @@
 $(".countdown").each(function(index){
   
   //Get date from component
-  var countdownTo = new Date( $(this).data('countdown') ).getTime();
+  var theDate = $(this).data('countdown');
+  var countdownTo = new Date( theDate ).getTime();
+  
+  console.log('Starting countdown to '+theDate);
   
   var x = setInterval(function() {
     
@@ -26,6 +29,7 @@ $(".countdown").each(function(index){
       output = output + " ago";
     }
     
+    console.log(output);
     $(this).html(output);
     
   }, 1000);
