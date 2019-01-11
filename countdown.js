@@ -1,6 +1,21 @@
 function UpdateCountdowns(){
   var countCountdowns = 0;
-  $(".countdown").each(function(index){
+  $("progress.countdown").each(function(index){
+    var fromDate = $(this).data('from');
+    var toDate = $(this).data('to');
+    
+    var now = new Date().getTime();
+    
+    var duration = toDate - fromDate;
+    var remaining = toDate - now;
+    
+    var percentElapsed = remaining / duration;
+    
+    $(this).attr('value',percentElapsed);
+    $(this).attr('max',100);
+    
+  })'
+  $(":not(progress).countdown").each(function(index){
     countCountdowns++;
     
     //Get date from component
