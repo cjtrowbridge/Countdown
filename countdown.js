@@ -24,7 +24,19 @@ function UpdateCountdowns(){
     var seconds = Math.floor((remaining % (1000 * 60)) / 1000);
 
     //Format the output
-    var output = days + ":" + hours+":" + minutes + ":" + seconds;
+    var output = ""
+    if(days > 0){
+      output+= days + " days, ";
+    }
+    if(hours>0){
+      output+= hours+" hours, ";
+    }
+    if(minutes>0){
+      output+= minutes + " minutes, ";
+    }
+    if(seconds>0){
+      output+= seconds + " seconds";
+    }
 
     //If counting up, add "ago"
     if(remaining < 0){ 
