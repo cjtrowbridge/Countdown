@@ -14,7 +14,7 @@ function UpdateCountdowns(){
     $(this).attr('value',percentElapsed);
     $(this).attr('max',100);
     
-  })'
+  });
   $(":not(progress).countdown").each(function(index){
     countCountdowns++;
     
