@@ -11,6 +11,12 @@ function UpdateCountdowns(){
     
     var percentElapsed = remaining / duration;
     
+    //convert to percent
+    percentElapsed *= 100;
+    
+    //round off
+    percentElapsed = Math.floor(percentElapsed);
+    
     $(this).attr('value',percentElapsed);
     $(this).attr('max',100);
     
