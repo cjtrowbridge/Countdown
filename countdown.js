@@ -1,8 +1,8 @@
 function UpdateCountdowns(){
   var countCountdowns = 0;
   $("progress.countdown").each(function(index){
-    var fromDate = $(this).data('from');
-    var toDate = $(this).data('to');
+    var fromDate = new Date( $(this).data('from') );
+    var toDate = new Date( $(this).data('to') );
     
     var now = new Date().getTime();
     
