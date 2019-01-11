@@ -67,6 +67,37 @@ function UpdateCountdowns(){
     $(this).html(output);
     
   });
+  $(".countdown-days").each(function(index){
+    countCountdowns++;
+    
+    //Get date from component
+    var theDate = $(this).data('countdown');
+    var countdownTo = new Date( theDate ).getTime();
+
+    //Get current time
+    var now = new Date().getTime();
+
+    //Calculate remaining time
+    var remaining = countdownTo - now;
+
+    // Calculate remaining days, hours, minutes, seconds
+    var days    = Math.floor(remaining / (1000 * 60 * 60 * 24));
+    
+    //Format the output
+    var output = ""
+    if(days > 0){
+      output+= days + " days ";
+    }
+    
+    //If counting up, add "ago"
+    if(remaining < 0){ 
+      output = output + " ago";
+    }
+
+    $(this).html(output);
+    
+  });
+  
   return countCountdowns;
 }
 
