@@ -22,6 +22,7 @@ function UpdateCountdowns(){
     
     //Add classes
     $(this).css('display','block');
+    $(this).css('width','100%');
     
   });
   $(":not(progress).countdown").each(function(index){
