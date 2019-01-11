@@ -1,4 +1,4 @@
-function StartCountdowns(){
+function UpdateCountdowns(){
   var countCountdowns = 0;
   $(".countdown").each(function(index){
     countCountdowns++;
