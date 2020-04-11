@@ -63,6 +63,8 @@ function UpdateCountdowns(){
     if(remaining < 0){ 
       output = output + " ago";
     }
+    
+    output = output.trim();
 
     $(this).html(output);
     
