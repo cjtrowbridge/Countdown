@@ -95,6 +95,8 @@ function UpdateCountdowns(){
     if(remaining < 0){ 
       output = output + " ago";
     }
+    
+    output = output.trim();
 
     $(this).html(output);
     
@@ -103,7 +105,7 @@ function UpdateCountdowns(){
   return countCountdowns;
 }
 
-var x = setInterval(function(){
+var x = setTimeout(function(){
   if(UpdateCountdowns()==0){
     clearInterval(x);
   }
