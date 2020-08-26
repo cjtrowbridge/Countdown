@@ -35,7 +35,7 @@ function UpdateCountdowns(){
     var remaining = countdownTo - now;
 
     // Calculate remaining days, hours, minutes, seconds
-    var years   = Math.floor(remaining  % (1000 * 60 * 60 * 24 * 365));
+    var years   = Math.floor(remaining  / (1000 * 60 * 60 * 24 * 365));
     var days    = Math.floor(remaining  % (1000 * 60 * 60 * 24 * 365) / (1000 * 60 * 60 * 24));
     var hours   = Math.floor((remaining % (1000 * 60 * 60 * 24))      / (1000 * 60 * 60));
     var minutes = Math.floor((remaining % (1000 * 60 * 60))           / (1000 * 60));
